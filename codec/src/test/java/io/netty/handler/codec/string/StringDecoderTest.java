@@ -30,7 +30,7 @@ public class StringDecoderTest {
 
     @Test
     public void testDecode() {
-        String msg = "abc1234";
+        String msg = "abc123";
         ByteBuf byteBuf = Unpooled.copiedBuffer(msg, CharsetUtil.UTF_8);
         EmbeddedChannel channel = new EmbeddedChannel(new StringDecoder());
         assertTrue(channel.writeInbound(byteBuf));
